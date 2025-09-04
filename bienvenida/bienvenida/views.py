@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from . models import Producto
+from .models import Producto
 
-def lista_producto(request):
-    productos = producto.objects.all()
-    return render(request, 'productos_listas.html', {'productos': productos})
+def lista_productos(request):
+    productos = Producto.objects.all()
+    return render(request, 'productos/lista.html', {'productos': productos})
